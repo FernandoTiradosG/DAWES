@@ -1,0 +1,22 @@
+[
+    {
+        "id": "ba55418114d18b9e",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "",
+        "persist": false,
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 270,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    }
+]
