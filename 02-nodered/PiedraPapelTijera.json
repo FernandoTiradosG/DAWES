@@ -1,22 +1,300 @@
 [
     {
-        "id": "ba55418114d18b9e",
-        "type": "http request",
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Piedra, Papel, Tijera",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "af39b8fa2e134462",
+        "type": "inject",
         "z": "f6f2187d.f17ca8",
         "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": false,
-        "url": "",
-        "persist": false,
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 270,
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "piedra,papel,tijera",
+        "payloadType": "str",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "eb1066fa4b3ee2ce"
+            ]
+        ]
+    },
+    {
+        "id": "edf8ed6964459dae",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "eb1066fa4b3ee2ce",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 1",
+        "func": "const opciones = msg.payload.split(\",\");\n\nconst opcionAI = opciones[Math.floor(Math.random() * opciones.length)];\n\nconst opcionUsuario = opciones[0];\n\nlet resultado = \"\"\nif (opcionAI === opcionUsuario){\n    resultado = \"¡¡¡Empate!!!\"\n} else if (opcionAI === \"papel\" && opcionUsuario === \"tijera\") {\n    resultado = \"¡Ganaste!\";\n} else if (opcionAI === \"piedra\" && opcionUsuario === \"papel\"){\n    resultado = \"¡Ganaste!\";\n} else if (opcionAI === \"tijera\" && opcionUsuario === \"piedra\") {\n    resultado = \"¡Ganaste!\";\n} else {\n    resultado = \"¡Perdiste!\";\n}\n\nmsg.payload = (\"USUARIO:\" + opcionUsuario + \", ORDENADOR:\" + opcionAI + \", Resultado\" + resultado);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 140,
+        "wires": [
+            [
+                "edf8ed6964459dae"
+            ]
+        ]
+    },
+    {
+        "id": "d14280e3a5e91e9b",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "piedra",
+        "payloadType": "str",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "3c52db25de8b2502"
+            ]
+        ]
+    },
+    {
+        "id": "d6f7b9f324de5c80",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3c52db25de8b2502",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 2",
+        "func": "const opcionesAI = [\"piedra\" , \"papel\" , \"tijera\"];\n\nconst opcionAI = opcionesAI[Math.floor(Math.random() * opcionesAI.length)];\n\nconst opcionUsuario = msg.payload;\n\nlet resultado = \"\"\nif (opcionAI === opcionUsuario){\n    resultado = \"¡¡¡Empate!!!\"\n} else if (opcionAI === \"papel\" && opcionUsuario === \"tijera\") {\n    resultado = \"¡Ganaste!\";\n} else if (opcionAI === \"piedra\" && opcionUsuario === \"papel\"){\n    resultado = \"¡Ganaste!\";\n} else if (opcionAI === \"tijera\" && opcionUsuario === \"piedra\") {\n    resultado = \"¡Ganaste!\";\n} else {\n    resultado = \"¡Perdiste!\";\n}\n\nmsg.payload = (\"USUARIO:\" + opcionUsuario + \", ORDENADOR:\" + opcionAI + \", Resultado\" + resultado);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "d6f7b9f324de5c80"
+            ]
+        ]
+    },
+    {
+        "id": "255dd8e8c4ac1336",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "papel",
+        "payloadType": "str",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "3c52db25de8b2502"
+            ]
+        ]
+    },
+    {
+        "id": "1e389d2f26372ff3",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "tijera",
+        "payloadType": "str",
+        "x": 150,
+        "y": 480,
+        "wires": [
+            [
+                "3c52db25de8b2502"
+            ]
+        ]
+    },
+    {
+        "id": "ca7185db345b6116",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "piedra",
+        "url": "/piedra",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "e2e531e453a116f1"
+            ]
+        ]
+    },
+    {
+        "id": "1e5080f6b6246f97",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "papel",
+        "url": "/papel",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
         "y": 660,
         "wires": [
-            []
+            [
+                "e2e531e453a116f1"
+            ]
         ]
+    },
+    {
+        "id": "2dbe3e1268db77a3",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "tijera",
+        "url": "/tijera",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "e2e531e453a116f1"
+            ]
+        ]
+    },
+    {
+        "id": "e2e531e453a116f1",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "function 3",
+        "func": "const opcionesAI = [\"piedra\" , \"papel\" , \"tijera\"];\n\nconst opcionAI = opcionesAI[Math.floor(Math.random() * opcionesAI.length)];\n\nconst opcionUsuario = msg.payload;\n\nlet resultado = \"\"\nif (opcionAI === opcionUsuario){\n    resultado = \"¡¡¡Empate!!!\"\n} else if (opcionAI === \"papel\" && opcionUsuario === \"tijera\") {\n    resultado = \"¡Ganaste!\";\n} else if (opcionAI === \"piedra\" && opcionUsuario === \"papel\"){\n    resultado = \"¡Ganaste!\";\n} else if (opcionAI === \"tijera\" && opcionUsuario === \"piedra\") {\n    resultado = \"¡Ganaste!\";\n} else {\n    resultado = \"¡Perdiste!\";\n}\n\nmsg.payload = (\"USUARIO:\" + opcionUsuario + \", ORDENADOR:\" + opcionAI + \", Resultado\" + resultado);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 660,
+        "wires": [
+            [
+                "c6b75d8547364c9c",
+                "25f28fbe7011343a"
+            ]
+        ]
+    },
+    {
+        "id": "c6b75d8547364c9c",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "Resultado",
+        "statusCode": "",
+        "headers": {},
+        "x": 740,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "25f28fbe7011343a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 560,
+        "wires": []
     }
 ]
