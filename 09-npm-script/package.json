@@ -1,0 +1,35 @@
+{
+  "name": "09-npm-script",
+  "version": "1.0.0",
+  "description": "Ejercicios tema 9",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "date": "node date.js",
+    "start": "node index.js",
+    "dev": "npx nodemon index.js",
+    "clear:modules": "rimraf ./node_modules",
+    "clear:locks": "rimraf ./package-lock.json",
+    "clear": "npm run clear:locks && npm run clear:modules",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "crear": "mkdirp file",
+    "crear:js": "cd file && touch $(1-index).js",
+    "crear:carpeta": "cd file && mkdirp",
+    "borrar": "rimraf ./file",
+    "borrar:js": "rm ./file/*.js",
+    "imprime:azul": "",
+    "imprime:rojo": "",
+    "imprime:verde": ""
+  },
+  "author": "Fernando TG",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "luxon": "^3.4.3",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^5.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
