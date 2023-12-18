@@ -45,6 +45,7 @@ npm start
 
 ## Estructura del proyecto:
 
+```text
 proyecto/
 │
 ├── src/
@@ -91,6 +92,7 @@ proyecto/
 ├── package.json
 ├── swaggerConfig.js
 └── README.md
+```
 
 + src/: Contiene los archivos necesarios para el funcionamiento de la aplicación.
   + config/: Contiene archivos de configuración como configuraciones de logging, base de datos, etc.
