@@ -1,0 +1,24 @@
+{
+  "name": "11-unit-test",
+  "version": "1.0.0",
+  "description": "Testeando FizzBuzz",
+  "main": "src/fizzbuzz.js",
+  "type": "module",
+  "scripts": {
+    "test": "ava",
+    "test:watch": "ava --watch --verbose",
+    "test:report": "c8 --reporter html ava && node test/sonar.js"
+  },
+  "author": "fernandoTG",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^5.3.1",
+    "c8": "^8.0.1",
+    "sonarqube-scanner": "^3.3.0"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js"
+    ]
+  }
+}

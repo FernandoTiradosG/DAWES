@@ -1,0 +1,8 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.dragAndDrop": false,
+  "terminal.integrated.tabs.title": "${cwd}"
+
+}
