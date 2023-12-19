@@ -138,6 +138,10 @@ https://documenter.getpostman.com/view/31589908/2s9YkodMKo
 
   ![alt text](/Recursos/ListarUsuarios.png "Listar")
 
+  + Unico Usuario
+
+  ![alt text](Recursos/Usuario.png "Unico")
+
 + Notas:
 Para poder utilizar estas funciones sera necesario incluir en la parte de "AUTHORIZATION" el token que se genero anteriormente en el login, teniendo en cuenta que el token tiene un tiempo de uso de 1 hora
 
@@ -155,7 +159,7 @@ Para poder utilizar estas funciones sera necesario incluir en la parte de "AUTHO
 
   + Listar:
 
-  ![alt text](/Recursos/ListarNotas.png "Listar")
+  ![alt text](/Recursos/ListarNotas.png "Listar")Recursos\Usuario.png
 
 ## Observaciones
 
