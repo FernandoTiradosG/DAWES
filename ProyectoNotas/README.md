@@ -117,26 +117,26 @@ https://documenter.getpostman.com/view/31589908/2s9YkodMKo
 
 + Login:
   
-  ![alt text](/Recursos/Login.png "login")
+  ![alt text](Recursos/Login.png "login")
 
   Esto generara un token que se tendra que usar para el manejo de las notas, copiandolo en la parte de autorización
 
 + Usuarios:
   + Crear:
   
-  ![alt text](/Recursos/CrearUsuario.png "Crear")
+  ![alt text](Recursos/CrearUsuario.png "Crear")
 
   + Editar:
 
-  ![alt text](/Recursos/EditarUsuario.png "Editar")
+  ![alt text](Recursos/EditarUsuario.png "Editar")
 
   + Borrar:
 
-  ![alt text](/Recursos/BorrarUsuario.png "Borrar")
+  ![alt text](Recursos/BorrarUsuario.png "Borrar")
 
   + Listar:
 
-  ![alt text](/Recursos/ListarUsuarios.png "Listar")
+  ![alt text](Recursos/ListarUsuarios.png "Listar")
 
   + Unico Usuario
 
@@ -147,19 +147,19 @@ Para poder utilizar estas funciones sera necesario incluir en la parte de "AUTHO
 
   + Crear:
   
-  ![alt text](/Recursos/CrearNota.png "Crear")
+  ![alt text](Recursos/CrearNota.png "Crear")
 
   + Editar:
 
-  ![alt text](/Recursos/EditarNota.png "Editar")
+  ![alt text](Recursos/EditarNota.png "Editar")
 
   + Borrar:
 
-  ![alt text](/Recursos/BorrarNota.png "Borrar")
+  ![alt text](Recursos/BorrarNota.png "Borrar")
 
   + Listar:
 
-  ![alt text](/Recursos/ListarNotas.png "Listar")Recursos\Usuario.png
+  ![alt text](Recursos/ListarNotas.png "Listar")Recursos\Usuario.png
 
 ## Observaciones
 
