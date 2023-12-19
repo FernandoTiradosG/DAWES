@@ -132,7 +132,7 @@ export function login(req, res) {
       return res.status(401).json({ error: 'Contraseña incorrecta' });
     }
     const PSWD = config.pswd;
-    const token = jwt.sign({ id: user.id }, PSWD , { expiresIn: '1h' });
+    const token = jwt.sign({ id: user.id }, 'secret' , { expiresIn: '1h' });
 
     res.json({ token });
   } catch (error) { 

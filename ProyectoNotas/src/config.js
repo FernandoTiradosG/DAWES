@@ -5,7 +5,7 @@ const app = {
 }
 
 const pswd = {
-  pswd: process.env.S_WORD || '1234',
+  pswd: process.env.S_WORD || 'secret',
 }
 
 const config = {

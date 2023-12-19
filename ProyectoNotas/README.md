@@ -113,4 +113,52 @@ proyecto/
 
 ## Uso de las funciones principales
 
-## Consideraciones de seguridad
+https://documenter.getpostman.com/view/31589908/2s9YkodMKo
+
++ Login:
+  
+  ![alt text](/Recursos/Login.png "login")
+
+  Esto generara un token que se tendra que usar para el manejo de las notas, copiandolo en la parte de autorización
+
++ Usuarios:
+  + Crear:
+  
+  ![alt text](/Recursos/CrearUsuario.png "Crear")
+
+  + Editar:
+
+  ![alt text](/Recursos/EditarUsuario.png "Editar")
+
+  + Borrar:
+
+  ![alt text](/Recursos/BorrarUsuario.png "Borrar")
+
+  + Listar:
+
+  ![alt text](/Recursos/ListarUsuarios.png "Listar")
+
++ Notas:
+Para poder utilizar estas funciones sera necesario incluir en la parte de "AUTHORIZATION" el token que se genero anteriormente en el login, teniendo en cuenta que el token tiene un tiempo de uso de 1 hora
+
+  + Crear:
+  
+  ![alt text](/Recursos/CrearNota.png "Crear")
+
+  + Editar:
+
+  ![alt text](/Recursos/EditarNota.png "Editar")
+
+  + Borrar:
+
+  ![alt text](/Recursos/BorrarNota.png "Borrar")
+
+  + Listar:
+
+  ![alt text](/Recursos/ListarNotas.png "Listar")
+
+## Observaciones
+
+La aplicación no estaria completa ya que faltaria incluir unas cuantas cosas más como son los test y la cobertura con SonarQube o la descarga y subida de archivos con multer. Además, la parte de control de usuarios necesitaria tambien un control de uso por rol en el que el admin fuera el unico que puede manejar todas las funciones, al crearse nuevos usuarios tubieran solo el rol de usuario y este le diera permiso solo editar contraseña o borrar el ususrio.
+
+El proyecto queda abierto para la inclusion de base de datos y otras posibles funciones que se vean en el futuro.
