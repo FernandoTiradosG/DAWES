@@ -159,7 +159,7 @@ Para poder utilizar estas funciones sera necesario incluir en la parte de "AUTHO
 
   + Listar:
 
-  ![alt text](Recursos/ListarNotas.png "Listar")Recursos\Usuario.png
+  ![alt text](Recursos/ListarNotas.png "Listar")
 
 ## Observaciones
 
