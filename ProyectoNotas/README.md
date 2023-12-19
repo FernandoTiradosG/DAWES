@@ -159,6 +159,6 @@ Para poder utilizar estas funciones sera necesario incluir en la parte de "AUTHO
 
 ## Observaciones
 
-La aplicación no estaria completa ya que faltaria incluir unas cuantas cosas más como son los test y la cobertura con SonarQube o la descarga y subida de archivos con multer. Además, la parte de control de usuarios necesitaria tambien un control de uso por rol en el que el admin fuera el unico que puede manejar todas las funciones, al crearse nuevos usuarios tubieran solo el rol de usuario y este le diera permiso solo editar contraseña o borrar el ususrio.
+La aplicación no estaría completa ya que faltaría incluir unas cuantas cosas más como son los test y la cobertura con SonarQube o la descarga y subida de archivos con multer. Además, la parte de control de usuarios necesitaría también un control de uso por rol en el que el administrador fuera el único que puede manejar todas las funciones, al crearse nuevos usuarios tuvieran solo el rol de usuario y este le diera permiso solo editar contraseña o borrar el usuario.
 
-El proyecto queda abierto para la inclusion de base de datos y otras posibles funciones que se vean en el futuro.
+El proyecto queda abierto para la inclusión de base de datos y otras posibles funciones que se vean en el futuro.
