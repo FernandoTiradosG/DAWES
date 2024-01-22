@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.3/socket.io.js"></script>
+  <script>
+    window.onload = init;
+
+    const socket = io();
+
+    socket.on('single', (data) => {
+      console.log(data);
+    });
+
+    function init() {
+      const ul = document.getElementById('list');
+      
+      const createLi = (text) => {
+        const li = document.createElement('li');
+        li.innerText = text;
+        return li;
+      }
+
+      const dataText = document.getElementById('date');
+      const date = new Date();
+      dataText.innerText = date.toLocaleDateString();
+      socket.on('date', (data) => {
+        const newDate = new Date(data);
+        dataText.innerText = newDate.toLocaleDateString();
+      });
+    }
+
+    function send() {
+      const input = document.getElementById('input');
+      const text = input.value;
+      socket.emit('echo', text);
+    }
+
+  </script>
+  <title>Websocket</title>
+</head>
+<body>
+  <h1>Websocket</h1>
+  <p>Open the console to see the messages</p>
+
+  <h2 id="date"></h2>
+  <button id="btn" onclick="send()">Click me</button>
+  <input type="text" id="input" />
+  <ul id="list"></ul>
+
+</body>
+</html>
