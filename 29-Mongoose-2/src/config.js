@@ -20,4 +20,3 @@ export const jph = {
 }
 
 export default config;
-

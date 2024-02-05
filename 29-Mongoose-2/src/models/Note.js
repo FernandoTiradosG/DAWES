@@ -1,23 +1,12 @@
 import mongoose from "mongoose";
 
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
-const animalSubSchema = new Schema({
-  data: Schema.Types.Mixed,
-}, { _id: false });
+const noteSchema = new Schema({
+  title: { type: String, required: true, unique: true },
+  content: { type: String, required: true, match: /^(?!\s*$).+/},
+  category: { type: String, default: 'uncategorized' },
+  author: { type: mongoose.Types.ObjectId }
+}, { timestamps: { createdAt: true} });
 
-const AnimalSchema = new Schema({
-  name: String,
-  color: String,
-  legs: Number,
-  hastail: Boolean,
-  age: Number,
-  data: animalSubSchema,
-  data2: {
-    data: Schema.Types.Mixed,
-  }
-}, { timestamps: { createdAt: 'create_at', updatedAt: false} });
-
-const model = mongoose.model('Animal', AnimalSchema);
-
-export default model;
+export default model('Note', noteSchema);
