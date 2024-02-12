@@ -7,4 +7,10 @@ const userSchema = new Schema({
   password: { type: String, required: true },
 }, { timestamps: true});
 
+userSchema.set('toJSON', function(doc){
+  const { __v, _id, password, ...object } = doc;
+  object.id = _id;
+  return object;
+})
+
 export default model('User', userSchema);

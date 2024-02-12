@@ -13,6 +13,9 @@ const config = {
         user: process.env.MONGODB_USER,
         password: process.env.MONGODB_PASSWORD,
     },
+    app: {
+        secretKey: process.env.SECRET_KEY,
+    },
 }
 
 export const jph = {

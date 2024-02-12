@@ -1,13 +1,13 @@
 import { User } from '../../models/index.js';
 
 export async function getUserByName(username, password) {
-  const user = await User.findOne({ username });s
+  const user = await User.findOne({ username });
 
   return user;
 }
 
 export async function getUser(filters) {
-  const { name} = filters;
+  const { name } = filters;
 
   const query = {
     username: name && new RegExp(name, 'i') //name ? new RegExp(name, 'i') : undefined,
@@ -17,7 +17,7 @@ export async function getUser(filters) {
     Object.entries(query).filter(([_, a]) => a !== undefined)
   )
 
-  const users = await User.find(query);
+  const users = await User.find(cleanedQuery);
   return users;
 }
 
